@@ -10,9 +10,17 @@ function nestedTarget() {
 }
 
 function deepestChild() {
-  var current = document.querySelector('#grand-node div div div div');
-    return current;
+  let current = document.getElementById('grand-node');
+  let nextNode = node.children[0];
+
+  while (nextNode) {
+    current = nextNode;
+    nextNode = node.children[0];
+  }
+
+  return current;
 }
+
 
 
 function increaseRankBy(n) {
