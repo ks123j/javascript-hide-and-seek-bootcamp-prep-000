@@ -15,7 +15,7 @@ function deepestChild() {
 
   while (nextNode) {
     current = nextNode;
-    nextNode = node.children[0];
+    nextNode = current.children[0];
   }
 
   return current;
